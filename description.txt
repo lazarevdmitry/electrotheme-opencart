@@ -1,0 +1,81 @@
+Tested:
+3.0.2.0 (работает)
+3.0.0.0 (работает)
+3.0.1.1 (работает)
+3.0.1.2 (работает)
+
+
+Краткое описание шаблона: для чего и для кого подходит.
+
+Ссылка для скачивания
+
+Mobile Responsive
+User friendly design
+Easy to install
+Easy to customize
+Compatible Browsers : Firefox, Chrome, Safari.
+Opencart Version : 2.0.x
+
+
+Ссылка на демо
+
+(Реклама своих шаблонов)
+
+2. Basecart Theme:
+
+	для кого и для чего
+
+ссылка на демо
+
+основные свойства:
+
+* Easy to install
+* Build with Bootstrap
+* 17 different color styles
+* Admin options for easy style switching
+* Responsive design
+* Multi language support
+* Font Awesome icons
+* Cross browser compatible
+
+Compatibility
+
+* OpenCart 3.0.2.0
+* OpenCart 3.0.1.2
+* OpenCart 3.0.0.0
+* OpenCart 2.3.0.2
+* OpenCart 2.2.0.0
+* OpenCart 2.1.0.2
+* OpenCart 2.1.0.1
+* OpenCart 2.0.3.1
+
+Changelog
+
+Installation
+
+3. Default-x
+
+Description
+
+Demo Front
+Demo Admin
+
+Description of some features
+
+Installation instructions for 2.x, 3.x
+
+Support and license
+
+
+Текст для этого шаблона:
+
+Шаблон Electro является адаптацией шаблона от Cololib? для CMS Opencart.
+неплохо подойдет для интернет-магазинов электроники, но возможно использование и с другими типами интернет-магазинов.
+
+Responsive design
+Font Awesome icons
+Cross browser compatible
+
+Demo
+
+Compatible with: Opencart 3.0.0.0, 3.0.1.1, 3.0.1.2, 3.0.2.2

@@ -44,8 +44,7 @@ $(document).ready(function() {
         }
     });
     $('.input-checkbox label').on('click', function(e) {
-        // console.log($(e.target).parent().data("href"));
-        // window.location = $(e.target).parent().data("href");
+        window.location = $(e.target).parent().data("href");
     });
 
     $('#input-quantity').on('input', function(event) {

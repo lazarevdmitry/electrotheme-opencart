@@ -25,17 +25,14 @@
   <div class="container">
     <!-- row -->
     <div class="row" id="content">
-      {{ column_left }}
+      {# column_left #}
       {% if products|length >0 %}
       <!-- ASIDE -->
       <div id="aside" class="col-md-3">
-
         {% if products|length >0 %}
           {% if categories|length >0 %}
         <!-- aside Widget -->
         <div class="aside aside-categories">
-
-          <h3 class="aside-title">{{ text_refine }}</h3>
           <div class="checkbox-filter">
             {% if categories|length <=5 %} 
 
