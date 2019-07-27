@@ -1,0 +1,78 @@
+{{ header }}
+{% include "electro/template/common/breadcrumbs.twig" %}
+<div class='section'>
+  <div id="product-search" class="container">
+
+    <div class="row">{{ column_left }}
+      {% if column_left and column_right %}
+      {% set class = 'col-sm-6' %}
+      {% elseif column_left or column_right %}
+      {% set class = 'col-sm-9' %}
+      {% else %}
+      {% set class = 'col-sm-12' %}
+      {% endif %}
+      <div id="content" class="{{ class }}">
+        <h2>{{ heading_title }}</h2>
+
+        {% if products %}
+        <!-- STORE -->
+          <!-- store top filter -->
+          <div class="store-filter clearfix">
+            <div class="store-sort">
+              <label>
+                {{ text_sort }}
+                <select class="input-select" onchange="location = this.value;" id="input-sort">
+                  {% for sorts in sorts %}
+                  {% if sorts.value == '%s-%s'|format(sort,order) %}
+                  <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+                  {% else %}
+                  <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+                  {% endif %}
+                  {% endfor %}
+                </select>
+              </label>
+
+              <label>
+                Show:
+                <select class="input-select" id="input-limit" onchange="location = this.value;">
+                  {% for limits in limits %}
+                  {% if limits.value == limit %}
+                  <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
+                  {% else %}
+                  <option value="{{ limits.href }}">{{ limits.text }}</option>
+                  {% endif %}
+                  {% endfor %}
+                </select>
+              </label>
+            </div>
+            <ul class="store-grid">
+              <li class="active" id='grid-view' title="{{ button_grid }}"><i class="fa fa-th"></i></li>
+              <li id='list-view' title="{{ button_list }}"><i class="fa fa-th-list"></i></li>
+            </ul>
+          </div>
+          <!-- /store top filter -->
+
+          <!-- store products -->
+          <div class="row">
+            {% for product in products %}
+              {% include "electro/template/common/product.twig" %}
+            {% endfor %}
+          </div>
+          <!-- /store products -->
+
+          <!-- store bottom filter -->
+          <div class="store-filter clearfix">
+            <span class="store-qty">{{ results }}</span>
+            {{ pagination }}
+          </div>
+          <!-- /store bottom filter -->
+        <!-- /STORE -->
+        {% endif %}
+
+
+        {{ content_bottom }}
+      </div>
+      {{ column_right }}</div>
+  </div>
+</div>
+{{ footer }}

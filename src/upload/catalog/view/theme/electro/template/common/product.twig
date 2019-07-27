@@ -1,0 +1,66 @@
+
+        {# product #}
+          <div class=" col-md-4 col-xs-6 product-grid">
+            <div class="product">
+              <div class="product-img">
+                <img src="{{ product.thumb }}" alt="{{ product.name }}">
+                <div class="product-label">
+                </div>
+              </div>
+              <!-- /product-img -->
+              <div class="product-body">
+                <h3 class="product-name"><a href="{{ product.href }}">{{ product.name }}</a></h3>
+
+                {% if product.price%}
+
+                {% if not product.special %}
+                <h4 class="product-price">{{ product.price }}</h4>
+                {% else %}
+                <h4 class="product-price">{{ product.special }} <del class="product-old-price">{{ product.price }}</del></h4>
+                {% endif %}
+
+                {% endif %}
+
+                {% if product.rating %}
+                <div class="product-rating">
+                  {% for i in 1..5 %}
+                  {% if product.rating>=i %} <i class="fa fa-star"></i>
+                  {% else %}
+                  <i class="fa fa-star-o"></i>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+                {% else %}
+                <div class="product-rating">
+                  {% for i in 1..5 %}
+                  <i class="fa fa-star-o"></i>
+                  {% endfor %}
+                </div>
+                {% endif %}
+                <!-- /product-rating -->
+                <div class="product-btns">
+                  <input type='hidden' value='{{ product.product_id }}' class='product-id' />
+                  <button class="add-to-wishlist" onclick="wishlist.add('{{ product.product_id }}')">
+                    <i class="fa fa-heart-o"></i>
+                    <span class="tooltipp">{{ button_wishlist }}</span>
+                  </button>
+                  <button class="add-to-compare" onclick="compare.add('{{ product.product_id }}')">
+                    <i class="fa fa-exchange"></i>
+                    <span class="tooltipp">{{ button_compare }}</span>
+                  </button>
+                </div>
+                <!-- /product-btns -->
+              </div>
+              <!-- /product-body -->
+              <input type='hidden' value='1' class='input-quantity' />
+              <div class="add-to-cart">
+                <button class="add-to-cart-btn" type="button" data-product-id="{{ product.product_id }}">
+                  <i class="fa fa-shopping-cart"></i>
+                  {{ button_cart }}
+                </button>
+              </div>
+              <!-- /add-to-cart -->
+            </div>
+            <div class="clearfix visible-sm visible-xs"></div>
+          </div>
+        {# /product #}
